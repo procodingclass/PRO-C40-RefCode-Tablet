@@ -6,9 +6,7 @@ class Player {
     this.positionX = 0;
     this.positionY = 600;
     this.rank = 0;
-    this.rotation = 0;
-    this.blast = false;
-  }
+   }
   addPlayer() {
     if (this.index === 1) {
       this.positionX = width / 2 - 320;
