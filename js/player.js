@@ -7,6 +7,21 @@ class Player {
     this.positionY = 600;
     this.rank = 0;
    }
+  
+  
+  getCount() {
+    var playerCountref = database.ref("playerCount");
+    playerCountref.on("value", data => {
+      playerCount = data.val();
+    });
+  }
+  
+   updateCount(count) {
+    database.ref("/").update({
+      playerCount: count
+    });
+  }
+  
   addPlayer() {
     if (this.index === 1) {
       this.positionX = width / 2 - 320;
@@ -28,10 +43,6 @@ class Player {
     });
   }
 
-  updateCount(count) {
-    database.ref("/").update({
-      playerCount: count
-    });
-  }
+ 
 
 }
