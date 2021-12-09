@@ -9,6 +9,7 @@ start() {
       form = new Form();
       form.display();
       player = new Player();
+      player.getCount();
     }
   } 
 }
